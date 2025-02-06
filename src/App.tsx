@@ -1,23 +1,15 @@
 /** @format */
 
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { Button, styled } from "@mui/material";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+      <StyledButton variant="contained">Hello World</StyledButton>
       <h1>Project-Hope</h1>
 
       <div className="card">
@@ -36,3 +28,8 @@ function App() {
 }
 
 export default App;
+
+const StyledButton = styled(Button)({
+  backgroundColor: "red",
+  color: "white",
+});
