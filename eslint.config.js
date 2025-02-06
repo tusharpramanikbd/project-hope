@@ -8,9 +8,10 @@ import tseslint from "typescript-eslint";
 import react from "eslint-plugin-react";
 import prettier from "eslint-config-prettier";
 import prettierPlugin from "eslint-plugin-prettier";
+import storybook from "eslint-plugin-storybook";
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["dist", ".storybook/", "*.stories.tsx"] },
   {
     settings: { react: { version: "18.3" } },
     extends: [
@@ -18,6 +19,7 @@ export default tseslint.config(
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
       prettier,
+      ...storybook.configs["flat/recommended"],
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -26,6 +28,9 @@ export default tseslint.config(
       parserOptions: {
         project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
     plugins: {
@@ -33,6 +38,7 @@ export default tseslint.config(
       "react-refresh": reactRefresh,
       react,
       prettier: prettierPlugin,
+      storybook,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -43,6 +49,8 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "prettier/prettier": ["error", { semi: true, singleQuote: false }],
+      "@typescript-eslint/no-unsafe-member-access": "warn",
+      "storybook/default-exports": "off",
     },
   },
 );
