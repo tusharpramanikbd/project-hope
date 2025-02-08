@@ -2,17 +2,22 @@
 
 import { useState } from "react";
 import "./App.css";
-import { Button, styled } from "@mui/material";
+import { Button, styled, useTheme } from "@mui/material";
+import { useThemeContext } from "./theme/ThemeContext";
 
 function App() {
   const [count, setCount] = useState(0);
+  const { palette } = useTheme();
+  const { toggleTheme } = useThemeContext();
 
   return (
     <>
-      <StyledButton variant="contained">Hello World</StyledButton>
+      <StyledButton variant="contained" onClick={toggleTheme}>
+        Hello World
+      </StyledButton>
       <h1>Project-Hope</h1>
 
-      <div className="card">
+      <div className="card" style={{ backgroundColor: palette.text.primary }}>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -29,7 +34,7 @@ function App() {
 
 export default App;
 
-const StyledButton = styled(Button)({
-  backgroundColor: "red",
-  color: "white",
-});
+const StyledButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper,
+  color: theme.palette.primary.main,
+}));

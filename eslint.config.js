@@ -51,6 +51,7 @@ export default tseslint.config(
       "prettier/prettier": ["error", { semi: true, singleQuote: false }],
       "@typescript-eslint/no-unsafe-member-access": "warn",
       "storybook/default-exports": "off",
+      "react-refresh/only-export-components": "off",
     },
   },
 );
