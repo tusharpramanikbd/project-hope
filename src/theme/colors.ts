@@ -1,6 +1,10 @@
-import { PaletteOptions } from "@mui/material";
+import { PaletteOptions, SimplePaletteColorOptions } from "@mui/material";
 
-const lightPalette: PaletteOptions = {
+export interface DefaultPaletteOptions extends PaletteOptions {
+  primary?: SimplePaletteColorOptions;
+}
+
+const lightPalette: DefaultPaletteOptions = {
   mode: "light",
   primary: {
     main: "#D50000",
@@ -15,7 +19,7 @@ const lightPalette: PaletteOptions = {
   },
 };
 
-const darkPalette: PaletteOptions = {
+const darkPalette: DefaultPaletteOptions = {
   mode: "dark",
   primary: {
     main: "#D50000",

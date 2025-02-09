@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./App.css";
 import { Button, styled, useTheme } from "@mui/material";
 import { useThemeContext } from "./theme/ThemeContext";
+import PHButton from "./common/components/PHButton";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,8 @@ function App() {
         Hello World
       </StyledButton>
       <h1>Project-Hope</h1>
+
+      <PHButton label="Hello Tushar" />
 
       <div className="card" style={{ backgroundColor: palette.text.primary }}>
         <button onClick={() => setCount((count) => count + 1)}>
