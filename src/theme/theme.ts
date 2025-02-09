@@ -1,10 +1,12 @@
 import { createTheme } from "@mui/material";
 import { lightPalette, darkPalette } from "./colors";
-import { GetFilledButtonStyle } from "./customStyles/CustomButtonStyles";
+import { getFilledButtonStyle } from "./customStyles/CustomButtonStyles";
 
 const getTheme = (mode: "light" | "dark") => {
+  const palette = mode === "light" ? lightPalette : darkPalette;
+
   return createTheme({
-    palette: mode === "light" ? lightPalette : darkPalette,
+    palette,
     typography: {
       fontFamily: "Arial, sans-serif",
     },
@@ -24,11 +26,7 @@ const getTheme = (mode: "light" | "dark") => {
             minWidth: "74px",
           },
         },
-        variants: [
-          ...GetFilledButtonStyle(
-            mode === "light" ? lightPalette : darkPalette,
-          ),
-        ],
+        variants: [...getFilledButtonStyle(palette)],
       },
     },
   });

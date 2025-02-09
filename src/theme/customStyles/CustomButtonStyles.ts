@@ -9,7 +9,7 @@ declare module "@mui/material/Button" {
   }
 }
 
-export const GetFilledButtonStyle = (palette: DefaultPaletteOptions) => [
+export const getFilledButtonStyle = (palette: DefaultPaletteOptions) => [
   {
     props: (props: ButtonProps) => props.variant === "filled",
     style: {

@@ -4,7 +4,7 @@ export interface DefaultPaletteOptions extends PaletteOptions {
   primary?: SimplePaletteColorOptions;
 }
 
-const lightPalette: DefaultPaletteOptions = {
+export const lightPalette: DefaultPaletteOptions = {
   mode: "light",
   primary: {
     main: "#D50000",
@@ -19,7 +19,7 @@ const lightPalette: DefaultPaletteOptions = {
   },
 };
 
-const darkPalette: DefaultPaletteOptions = {
+export const darkPalette: DefaultPaletteOptions = {
   mode: "dark",
   primary: {
     main: "#D50000",
@@ -33,5 +33,3 @@ const darkPalette: DefaultPaletteOptions = {
     paper: "#2B2B2B",
   },
 };
-
-export { lightPalette, darkPalette };

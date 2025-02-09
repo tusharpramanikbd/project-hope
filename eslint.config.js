@@ -38,7 +38,6 @@ export default tseslint.config(
       "react-refresh": reactRefresh,
       react,
       prettier: prettierPlugin,
-      storybook,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -53,6 +52,7 @@ export default tseslint.config(
       "storybook/default-exports": "off",
       "react-refresh/only-export-components": "off",
       "@typescript-eslint/no-unsafe-assignment": "off",
+      "storybook/prefer-pascal-case": "off",
     },
   },
 );
