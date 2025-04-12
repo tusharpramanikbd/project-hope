@@ -23,8 +23,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const ButtonExample: Story = {
+export const ButtonFilled: Story = {
   args: {
     variant: "filled",
+  },
+};
+
+export const ButtonOutline: Story = {
+  args: {
+    variant: "outline",
+  },
+};
+
+export const ButtonGhost: Story = {
+  args: {
+    variant: "ghost",
   },
 };
