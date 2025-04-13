@@ -16,9 +16,6 @@ export const getFilledButtonStyle = (palette: DefaultPaletteOptions) => [
       backgroundColor: palette.primary?.main,
       color: palette.text?.secondary,
       borderRadius: "10px",
-      "&:hover": {
-        opacity: 0.7,
-      },
     },
   },
   {
@@ -28,9 +25,6 @@ export const getFilledButtonStyle = (palette: DefaultPaletteOptions) => [
       color: palette.text?.primary,
       borderRadius: "10px",
       border: `1px solid ${palette.primary?.main}`,
-      "&:hover": {
-        opacity: 0.7,
-      },
     },
   },
   {
@@ -38,9 +32,6 @@ export const getFilledButtonStyle = (palette: DefaultPaletteOptions) => [
     style: {
       backgroundColor: "transparent",
       color: palette.text?.primary,
-      "&:hover": {
-        opacity: 0.7,
-      },
     },
   },
 ];

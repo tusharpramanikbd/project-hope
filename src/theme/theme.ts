@@ -24,9 +24,19 @@ const getTheme = (mode: "light" | "dark") => {
             lineHeight: "20px",
             textTransform: "none",
             minWidth: "74px",
+            "&:hover": {
+              opacity: 0.7,
+            },
           },
         },
         variants: [...getFilledButtonStyle(palette)],
+      },
+      MuiIconButton: {
+        styleOverrides: {
+          root: {
+            borderRadius: "10px",
+          },
+        },
       },
     },
   });
