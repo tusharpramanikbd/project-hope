@@ -38,6 +38,21 @@ const getTheme = (mode: "light" | "dark") => {
           },
         },
       },
+      MuiSelect: {
+        styleOverrides: {
+          root: {
+            textAlign: "center",
+            color: palette?.text?.secondary,
+          },
+        },
+      },
+      MuiMenuItem: {
+        styleOverrides: {
+          root: {
+            color: palette?.text?.secondary,
+          },
+        },
+      },
     },
   });
 };
