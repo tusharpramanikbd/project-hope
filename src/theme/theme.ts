@@ -53,6 +53,15 @@ const getTheme = (mode: "light" | "dark") => {
           },
         },
       },
+      MuiAutocomplete: {
+        styleOverrides: {
+          listbox: {
+            "& .MuiAutocomplete-option": {
+              color: palette?.text?.secondary,
+            },
+          },
+        },
+      },
     },
   });
 };

@@ -7,7 +7,7 @@ const meta: Meta<typeof PHDropdown> = {
   parameters: { layout: "centered" },
   args: {
     label: "DISTRICT",
-    options: ["Option 1", "Option 2", "Option 3"],
+    options: ["Dhaka", "Chittagong", "Khulna", "Rajshahi", "Sylhet", "Kushtia"],
     placeholder: "Select District",
   },
   argTypes: {},
@@ -19,3 +19,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const Autocomplete: Story = {
+  args: {
+    isAutocomplete: true,
+  },
+};
